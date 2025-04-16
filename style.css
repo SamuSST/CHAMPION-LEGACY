@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap'); /* Importar fuente Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap'); /* Importar fuente Cinzel */
+
+* {
+    box-sizing: border-box; /* Asegurar modelo de caja consistente en todos los elementos */
+}
+
+body {
+    margin: 0; /* Eliminar margen predeterminado */
+    padding: 0; /* Eliminar relleno predeterminado */
+    font-family: 'Montserrat', sans-serif; /* Establecer fuente predeterminada */
+    font-weight: 600; /* Establecer peso de fuente */
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
+}
+
+.image {
+    position: fixed; /* Fijar imagen al viewport */
+    top: 0; /* Alinear al tope */
+    left: 0; /* Alinear a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    object-fit: cover; /* Mantener proporción de aspecto */
+    z-index: -1; /* Colocar detrás de otros elementos */
+}
+
+.logo {
+    width: 90px; /* Establecer ancho del logo */
+    height: 80px; /* Establecer altura del logo */
+    
+}
+
+header {
+    position: fixed; /* Fijar encabezado en la parte superior */
+    top: 0; /* Alinear al tope */
+    z-index: 100; /* Asegurar que el encabezado esté encima de otros elementos */
+    width: 100%; /* Ancho completo */
+    background-color: transparent; /* Fondo transparente */
+}
+
+header .contenedor {
+    display: flex; /* Usar flexbox para el diseño */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrar elementos verticalmente */
+    max-width: 1280px; /* Limitar ancho máximo */
+    height: 85px; /* Establecer altura */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 0 30px; /* Agregar relleno horizontal */
+}
+
+header .menu-opciones {
+    transition: height 0.6s ease; /* Transición suave de altura */
+    background-color: transparent; /* Fondo transparente */
+}
+
+header .menu-opciones ul {
+    display: flex; /* Usar flexbox para el diseño */
+    flex-direction: row; /* Organizar elementos en una fila */
+    padding-left: 0; /* Eliminar relleno predeterminado */
+    margin: 0; /* Eliminar margen predeterminado */
+}
+
+header .menu-opciones li {
+    list-style: none; /* Eliminar viñetas */
+    margin: 15px; /* Agregar margen alrededor de los elementos */
+}
+
+header .menu-opciones a {
+    color: #c4b4b4; /* Establecer color del texto */
+    text-decoration: none; /* Eliminar subrayado */
+    padding: 10px 20px; /* Agregar relleno */
+    transition: color 0.3s; /* Transición suave de color */
+}
+
+header .menu-opciones a:hover {
+    color: white; /* Cambiar color al pasar el cursor */
+}
+
+header .controles-usuario {
+    display: flex; /* Usar flexbox para el diseño */
+    gap: 20px; /* Agregar espacio entre elementos */
+    align-items: center; /* Centrar elementos verticalmente */
+}
+
+header .controles-usuario ion-icon {
+    font-size: 25px; /* Establecer tamaño del ícono */
+    cursor: pointer; /* Cambiar cursor a puntero */
+    color: #c4b4b4; /* Establecer color del ícono */
+}
+
+header .controles-usuario ion-icon:hover {
+    color: white; /* Cambiar color al pasar el cursor */
+}
+
+#btn-menu {
+    display: none; /* Ocultar botón del menú por defecto */
+}
+
+.contenedor-central {
+    display: flex; /* Usar flexbox para el diseño */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: auto; /* Altura automática */
+    padding-top: 200px; /* Agregar relleno superior */
+    text-align: center; /* Centrar texto */
+}
+
+.titulo {
+    font-family: 'Cinzel', serif; /* Establecer fuente */
+    font-size: 110px; /* Establecer tamaño de fuente */
+    line-height: 1.1; /* Ajustar altura de línea */
+    color: white; /* Establecer color del texto */
+}
+.menu-escudos {
+    display: flex; /* Usar flexbox para el diseño */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    flex-wrap: wrap; /* Ajustar elementos a la siguiente línea */
+    gap: 30px; /* Agregar espacio entre elementos */
+    margin: 90px 20px; /* Agregar margen */
+}
+
+.menu-escudos a {
+    width: 150px; /* Aumentar ancho */
+    height: 140px; /* Aumentar altura */
+    transition: transform 0.3s ease; /* Transición suave de escalado */
+}
+
+.menu-escudos a:hover {
+    transform: scale(1.1); /* Escalar al pasar el cursor */
+}
+
+.menu-escudos img {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Mantener proporción de aspecto */
+    max-height: 110px; /* Aumentar altura máxima */
+    object-fit: contain; /* Contener imagen dentro de los límites */
+}
+
+.botones {
+    display: flex; /* Usar flexbox para el diseño */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    gap: 20px; /* Agregar espacio entre botones */
+    margin-top: 60px; /* Agregar margen superior */
+}
+
+button {
+    background-color: #0613519c; /* Establecer color de fondo */
+    border: 1px solid #ffffff; /* Agregar borde blanco */
+    color: white; /* Establecer color del texto */
+    font-size: 20px; /* Establecer tamaño de fuente */
+    padding: 10px 20px; /* Agregar relleno */
+    cursor: pointer; /* Cambiar cursor a puntero */
+    position: relative; /* Establecer posicionamiento relativo */
+    overflow: hidden; /* Ocultar desbordamiento */
+    border-radius: 9px; /* Redondear esquinas */
+}
+button:hover {
+    box-shadow: inset 0 0 0 .2px #ffffff, 0 0 10px #ffffff; /* Agregar sombra al pasar el cursor */
+    
+
+}
+
+@keyframes shine {
+    0% { background-position: 200% center; } /* Posición inicial */
+    100% { background-position: 0% center; } /* Posición final */
+}
+
+/* 🔄 RESPONSIVO */
+@media (max-width: 865px) {
+    header #btn-menu {
+        display: block; /* Mostrar botón del menú */
+    }
+
+    header .menu-opciones {
+        height: 0; /* Colapsar menú */
+        overflow: hidden; /* Ocultar desbordamiento */
+        position: absolute; /* Posicionar relativo al padre */
+        top: 85px; /* Posicionar debajo del encabezado */
+        left: 0; /* Alinear a la izquierda */
+        width: 100%; /* Ancho completo */
+        background-color: rgb(10, 19, 79); /* Establecer color de fondo */
+        transition: height 0.4s ease; /* Transición suave de altura */
+        z-index: 99; /* Colocar encima de otros elementos */
+    }
+
+    header .menu-opciones.mostrar {
+        height: 240px; /* Expandir altura del menú */
+    }
+
+    header .menu-opciones ul {
+        flex-direction: column; /* Organizar elementos en una columna */
+        align-items: center; /* Centrar elementos horizontalmente */
+        padding: 0; /* Eliminar relleno */
+        margin: 0; /* Eliminar margen */
+    }
+
+    header .menu-opciones li {
+        margin: 10px 0; /* Agregar margen vertical */
+    }
+}
